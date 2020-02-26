@@ -1,0 +1,1 @@
+### Goland不支持go1.14版本的vendor全部功能
