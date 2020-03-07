@@ -1,9 +1,15 @@
 package main
 
-import "github.com/gin-gonic/gin"
+import (
+	"yicheng/go/app"
+
+	"github.com/gin-gonic/gin"
+)
 
 func main() {
-	r := gin.Default()
+	//r := gin.Default()
+	r := gin.New()
+	r.Use(app.LoggerMiddleware())
 	r.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
